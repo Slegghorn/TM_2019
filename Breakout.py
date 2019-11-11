@@ -39,7 +39,7 @@ class Model:
     def __init__(self, n_actions, lr):
         self.NN = self.build_model(n_actions, lr)
 
-    def build_model(self, fc1_dims, n_actions, lr):
+    def build_model(self, n_actions, lr):
         model = Sequential()
         model.add(Conv2D(32, 8, 4, input_shape = (105, 80, 4,), activation = 'relu'))
         model.add(Conv2D(64, 4, 2, activation = 'relu'))
